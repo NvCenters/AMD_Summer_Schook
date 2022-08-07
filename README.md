@@ -1,6 +1,6 @@
 # AMD_Summer_School
 ## About The Project
-Using HLS to to achieve discrete Fourier variations.  
+Using HLS to to achieve Discrete Fourier Transform.  
 
 **Directory structure**
 │  **README.md**  - introduce the project <br>
