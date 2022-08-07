@@ -6,14 +6,6 @@ void dft (DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE], DTYPE real_op[SIZE],
 	int i, j;
 	DTYPE w;
 	DTYPE c, s;
-	DTYPE temp_r, temp_i;
-
-	/*#pragma HLS array_partition variable=real_sample cyclic factor=8
-	#pragma HLS array_partition variable=imag_sample cyclic factor=8
-	#pragma HLS array_partition variable=real_op cyclic factor=8
-	#pragma HLS array_partition variable=imag_op cyclic factor=8
-	#pragma HLS array_partition variable=cos_coefficients_table cyclic factor=8
-	#pragma HLS array_partition variable=sin_coefficients_table cyclic factor=8*/
 	#pragma HLS RESOURCE variable=sin_coefficients_table core=ROM_1P_LUTRAM
 	#pragma HLS RESOURCE variable=cos_coefficients_table core=ROM_1P_LUTRAM
 	#pragma HLS INTERFACE m_axi depth=1024 port=real_sample offset=slave
