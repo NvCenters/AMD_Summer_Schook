@@ -1,1 +1,1 @@
-# AMD_Summer_Schook
+# AMD_Summer_School
