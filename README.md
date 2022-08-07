@@ -3,7 +3,7 @@
 Using HLS to to achieve discrete Fourier variations.  
 
 **Directory structure**
-│  **README.md**  - introduce the project
+│  **README.md**  - introduce the project <br>
 │  
 ├─**ipython/**  -  Run on PYNQ 
 │      DFT.ipynb
