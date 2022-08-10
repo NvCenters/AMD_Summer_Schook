@@ -12,8 +12,8 @@ void dft (DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE], DTYPE real_op[SIZE],
 	int j, i;
 	DTYPE c;
 	DTYPE s;
-	DTYPE temp_real[SIZE]={0};
-	DTYPE temp_imag[SIZE]={0};
+	DTYPE t_real[SIZE];
+	DTYPE t_imag[SIZE];
 
 
 	for (i = 0; i < SIZE; i += 1) {
@@ -23,14 +23,14 @@ void dft (DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE], DTYPE real_op[SIZE],
 			c = cos_coefficients_table[(ap_uint<10>)(i * j)];
 			s = sin_coefficients_table[(ap_uint<10>)(i * j)];
 
-			temp_real[j] += (real_sample[i] * c - imag_sample[i] * s);
-			temp_imag[j] += (real_sample[i] * s + imag_sample[i] * c);
+			t_real[j] += (real_sample[i] * c - imag_sample[i] * s);
+			t_imag[j] += (real_sample[i] * s + imag_sample[i] * c);
 		}
 	}
 	for (j = 0; j < SIZE; j += 1) {
 		#pragma HLS PIPELINE II=1
-		real_op[j] = temp_real[j];
-		imag_op[j] = temp_imag[j];
+		real_op[j] = t_real[j];
+		imag_op[j] = t_imag[j];
 	}
 	}
 
