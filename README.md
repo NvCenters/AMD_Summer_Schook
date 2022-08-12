@@ -13,3 +13,50 @@
 ## tips
 1. 由于考研压力较大，故也没有更多时间能够再进一步优化，也是蛮遗憾的。
 2. 希望能够多讲一讲如何查看分析Vitis HLS的Synthesis log。
+## 文件树
+Before_optimization文件夹中是优化前的文件  
+DFT_optimize是优化后的文件  
+
+│  README.md  
+│    
+├─Before_optimization  
+│  │  Readme.md  
+│  │    
+│  ├─jupyter  
+│  │      DFT_1.ipynb  
+│  │        
+│  ├─overlay  
+│  │      DFT.bit  
+│  │      DFT.hwh  
+│  │        
+│  ├─report  
+│  │      dft_csynth.rpt  
+│  │        
+│  └─src  
+│          coefficients1024.h  
+│          DFT.cpp  
+│          DFT.h  
+│          dft_test.cpp  
+│          out.gold.dat  
+│            
+└─DFT_optimize  
+    │  Readme.md  
+    │    
+    ├─jupyter  
+    │      DFT.ipynb  
+    │      
+    ├─overlay  
+    │      DFT.bit  
+    │      DFT.hwh  
+    │        
+    ├─report  
+    │      dft_cosim.rpt  
+    │      dft_csynth.rpt  
+    │        
+    └─src  
+            coefficients1024.h  
+            dft.cpp  
+            dft.h  
+            dft_test.cpp  
+            out.gold.dat  
+            script.tcl  
