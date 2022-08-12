@@ -59,5 +59,4 @@ DFT_optimize是优化后的文件
             dft.h  
             dft_test.cpp  
             out.gold.dat  
-            script.tcl  
 ```
